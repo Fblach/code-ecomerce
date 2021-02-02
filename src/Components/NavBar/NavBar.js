@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import {SiApacheecharts} from 'react-icons/si';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from '../CartWidget/CartWidget'
 
 
 function NavBar() {
@@ -14,7 +15,7 @@ function NavBar() {
     return (
 
         <Navbar bg="dark" variant="dark" expand="lg">
-            <SiApacheecharts size={30} style={{ marginRight: 10, fill: 'white' }} />
+            <a href="#home"><SiApacheecharts href="#home" size={30} style={{ marginRight: 10, fill: 'white' }} /></a>
             <Navbar.Brand  style={{ marginLeft: 10}} href="#home">GonBla</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -26,7 +27,7 @@ function NavBar() {
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>
-
+            <CartWidget/>
             <Form inline>
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                 <Button variant="light">Search</Button>
