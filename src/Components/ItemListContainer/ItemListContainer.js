@@ -24,7 +24,7 @@ function ItemListContainer(){
         const myPromise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(Items)
-            }, 2000);
+            }, 3000);
     });
 
     myPromise.then((result) => setItems(result));
