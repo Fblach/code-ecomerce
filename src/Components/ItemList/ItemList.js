@@ -2,7 +2,7 @@ import ItemCard from '../ItemCard/ItemCard'
 
 const ItemList = ({items}) => {
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
            {items.map((item) => {
                 return <ItemCard key={items.id} item={item} />;
     })}           

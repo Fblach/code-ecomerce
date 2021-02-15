@@ -1,12 +1,10 @@
 import React from 'react'
-import Image from './Remera.jpg'
 import {Card, Button} from 'react-bootstrap'
 
 export default function ItemDetail ({product}){
-
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={Image} />
+        <Card style={{ width: '18rem', marginTop: 30}}>
+            <Card.Img variant="top" src={product.image} alt={product.name}/>
             <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>

@@ -2,7 +2,7 @@ import {Card} from 'react-bootstrap'
 
 export default function ItemCard({ item }){
     return (
-        <Card style={{ width: '8rem' }}>
+        <Card style={{ width: '8rem', margin: 10 }}>
             <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
                 <Card.Text>

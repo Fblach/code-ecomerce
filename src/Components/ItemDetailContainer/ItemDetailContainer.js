@@ -1,22 +1,21 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail'
 import Items from '../Items/Items'
 
 
 function ItemDetailContainer() {
 
+    const {id} = useParams();
     const [product, setProduct] = React.useState([]);
+    console.log(id)
+
 
     React.useEffect(() => {
-        const anotherPromise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(Items.find(item => item.id === 1))
-            }, 2000);
-        });
-
-        anotherPromise.then((result) => setProduct(result));
-    }, []);
-
+        let showProduct = Items.find(item => item.id == id)
+        setProduct(showProduct)
+    }, [id]);
+    console.log(product)
     return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
             <ItemDetail product={product}/>
