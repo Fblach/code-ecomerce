@@ -12,7 +12,7 @@ function ItemDetailContainer() {
 
 
     React.useEffect(() => {
-        let showProduct = Items.find(item => item.id == id)
+        let showProduct = Items.find(item => item.id === Number(id))
         setProduct(showProduct)
     }, [id]);
     console.log(product)

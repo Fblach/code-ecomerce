@@ -7,7 +7,7 @@ export default function Display({ value }) {
         marginLeft: '10px',
         textAlign: 'center',
         marginRight: '10px',
-        marginTop: '10px'
+        marginTop: '2px'
     }
 
     return (
