@@ -8,14 +8,12 @@ function ItemDetailContainer() {
 
     const {id} = useParams();
     const [product, setProduct] = React.useState([]);
-    console.log(id)
 
 
     React.useEffect(() => {
         let showProduct = Items.find(item => item.id === Number(id))
         setProduct(showProduct)
     }, [id]);
-    console.log(product)
     return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
             <ItemDetail product={product}/>
